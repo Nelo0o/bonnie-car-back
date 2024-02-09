@@ -2,27 +2,27 @@
 
 namespace App\Repository;
 
-use App\Entity\CarAd;
+use App\Entity\Category;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
- * @extends ServiceEntityRepository<CarAd>
+ * @extends ServiceEntityRepository<Category>
  *
- * @method CarAd|null find($id, $lockMode = null, $lockVersion = null)
- * @method CarAd|null findOneBy(array $criteria, array $orderBy = null)
- * @method CarAd[]    findAll()
- * @method CarAd[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Category|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Category|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Category[]    findAll()
+ * @method Category[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class CarAdRepository extends ServiceEntityRepository
+class CategoryRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, CarAd::class);
+        parent::__construct($registry, Category::class);
     }
 
 //    /**
-//     * @return CarAd[] Returns an array of CarAd objects
+//     * @return Category[] Returns an array of Category objects
 //     */
 //    public function findByExampleField($value): array
 //    {
@@ -36,7 +36,7 @@ class CarAdRepository extends ServiceEntityRepository
 //        ;
 //    }
 
-//    public function findOneBySomeField($value): ?CarAd
+//    public function findOneBySomeField($value): ?Category
 //    {
 //        return $this->createQueryBuilder('c')
 //            ->andWhere('c.exampleField = :val')
